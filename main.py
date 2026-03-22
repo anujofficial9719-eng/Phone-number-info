@@ -107,10 +107,23 @@ def extend_premium(user_id, days):
         upsert=True
     )
 
-# 🎯 START
+# 🎯 START (PHOTO + TEXT)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_id = update.message.from_user.id
+    user = update.message.from_user
+    user_id = user.id
+
     save_user(user_id)
+
+    text = (
+        f"👋 Hello {user.first_name},\n\n"
+        f"🤖 I am [Number Full Info](http://t.me/phone_number_info_ak_bot)\n"
+        f"*Your Professional Restricted Content Saver Bot.*\n\n"
+        f"🚀 System Status: 🟢 Online\n"
+        f"⚡ Performance: 10x High-Speed Processing\n"
+        f"🔐 Security: End-to-End Encrypted\n"
+        f"📊 Uptime: 99.9% Guaranteed\n\n"
+        f"👇 Select an Option Below to Get Started:"
+    )
 
     keyboard = [
         [InlineKeyboardButton("🔍 Search", callback_data="search")],
@@ -119,8 +132,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("ℹ️ Help", callback_data="help")]
     ]
 
-    await update.message.reply_text(
-        "🚀 *Pincode Bot Pro Max*",
+    await update.message.reply_photo(
+        photo="https://i.ibb.co/bjwFrTyy/7168219724-28773.jpg",
+        caption=text,
         reply_markup=InlineKeyboardMarkup(keyboard),
         parse_mode="Markdown"
     )
@@ -191,7 +205,7 @@ async def msg(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await m.edit_text(reply)
 
-# 👑 Admin
+# 👑 ADMIN
 async def add(update, context):
     if update.message.from_user.id != ADMIN_ID:
         return
