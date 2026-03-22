@@ -3,12 +3,6 @@ import json
 import sys
 from typing import Dict, List, Optional
 import time
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
 
 class PincodeLookup:
     def __init__(self):
