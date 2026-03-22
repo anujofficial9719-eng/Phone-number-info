@@ -1,9 +1,10 @@
-Phone-number-info/
-│── main.py
-│── requirements.txt
-│── README.md
-│── .gitignore
-│── LICENSE
+Phone-number-info-bot/
 │
-├── data/
-├── logs/
+├─ main.py                 # Main bot file
+├─ requirements.txt        # Dependencies
+├─ .env                    # BOT_TOKEN, DATABASE_URL, etc
+├─ README.md
+├─ LICENSE
+├─ __init__.py             # Empty file
+└─ assets/
+   └─ welcome.jpg          # Welcome image
