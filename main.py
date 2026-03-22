@@ -90,7 +90,7 @@ def validate_pincode(pincode: str) -> bool:
 
 def display_welcome():
     print("📍 Pincode Lookup Tool v2.0")
-    print("🌟 Made with ❤️  by @NGYT777GGG")
+    print("🌟 Made with ❤️  by @Anujedits76")
     print("=" * 50)
     print("🔍 Get detailed information about any Indian pincode")
     print("📈 Real-time data from official postal database")
