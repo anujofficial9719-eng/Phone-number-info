@@ -1,0 +1,9 @@
+phone-number-info/
+│── main.py
+│── requirements.txt
+│── README.md
+│── .gitignore
+│── LICENSE
+│
+├── data/
+├── logs/
